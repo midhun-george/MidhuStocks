@@ -1,3 +1,4 @@
+//Author - > Midhun
 var stocks = new Stocks('5VPEN9QA63CNPQFI'); // Replace with your own
 
 // Let's get the stock data of Tesla Inc for the last 10 minutes
