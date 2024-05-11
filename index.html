@@ -1,38 +1,6 @@
 <!--Midhun'sss-->
 <style>
-    #customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #customers tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #customers tr:hover {background-color: #ddd;}
-  
-  #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #04AA6D;
-    color: white;
-  }
-  .ui-widget {
-    width: 25%;
-    float: left;
-}
 
-.ui-widget select {
-    height: 30px;
-    width: 180px;
-}
-.g-type, .c-type{
-    position: relative;
-    bottom:3px;
-}
-.ui-widget:nth-child(2) {
-    position: relative;
-    bottom: 3px;
-}
 </style>
 <script src="stocks.js"></script>
 <!-- <script src="js/index.js"></script> -->
@@ -297,7 +265,7 @@ function ChangeGraphTypeWith(){
 }
 
 function selectView(t){
-    debugger;
+    
     selectedOpt = $("#View").val();
     if(selectedOpt == "Graph View"){
         $(".grid-sec").hide();
