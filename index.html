@@ -6,12 +6,13 @@
 <!-- <script src="js/index.js"></script> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
+<link rel = "stylesheet" href ="jqueryui.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/jquery.jqgrid.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/css/ui.jqgrid.min.css"><div id="showData"></div>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">    
+
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -22,7 +23,7 @@
         <input id="tags" onchange="arrayToTable(this)" style="width: 175px;">
       </div>
       <div class="ui-widget">
-        <label for="tags">Select View: </label>
+        <label for="View">Select View: </label>
         <select id="View" onchange="selectView(this)">
             <option>Tab View</option>
             <option>Graph View</option>
@@ -177,6 +178,10 @@ arrayToTable()
 
 function createGrid(div, cols, data, no_items){
 	var number_per_pages = no_items?no_items:5;
+    if(!$("#tags").val()){
+        $("#tags").val("IRCTC");
+    }
+
 	$("#"+div).jqGrid({
         colModel: cols,
         data: data,
